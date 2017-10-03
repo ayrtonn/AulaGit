@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Exemplo I</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../assets/css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="../index.html">Algoritmos II</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" style="margin-top: 60px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Exemplo 5</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <form class="form-inline" id="form">
+                        <div class="form-group">
+                            <input placeholder="Digite seu nome" id="box11" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Digite seu curso" id="box12" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Digite sua universidade" id="box13" class="form-control">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="form.res.value = funcao(form.box11.value, form.box12.value, form.box13.value)"><i class="fa fa-book"></i> Converter</button>
+                        <div class="form-group">
+                            <input id="res" class="form-control">
+                        </div>
+                    </form>
+
+                    <form class="form-inline" id="form2">
+                        <div class="form-group">
+                            <input placeholder="Digite uma frase" id="box21" class="form-control">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="form2.res2.value = funcao2(form2.box21.value)"><i class="fa fa-book"></i> Converter</button>
+                        <div class="form-group">
+                            <input id="res2" class="form-control">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="form2.res21.value = reverso(form2.res2.value)"><i class="fa fa-book"></i> Desconverter</button>
+                        <div class="form-group">
+                            <input id="res21" class="form-control">
+                        </div>
+                    </form>
+
+                    <!--<form class="form-inline" id="form3">
+                        <div class="form-group">
+                            <input placeholder="Digite vários nomes" id="box31" class="form-control">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="form3.res3.value = funcao3(form3.box31.value)"><i class="fa fa-book"></i> Mostrar nomes</button>
+                        <div class="form-group">
+                            <input id="res3" class="form-control">
+                        </div>
+                    </form>-->
+
+                    <!--<form class="form-inline" id="form4">
+                        <div class="form-group">
+                            <input placeholder="Digite uma frase" id="box41" class="form-control">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="form4.res4.value = funcao4(form4.box41.value)"><i class="fa fa-book"></i> Contar</button>
+                        <div class="form-group">
+                            <input id="res4" class="form-control">
+                        </div>
+                    </form>-->
+
+                    <form class="form-inline" id="form5">
+                        <div class="form-group">
+                            <input placeholder="Digite uma frase" id="box51" class="form-control">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="form5.res5.value = funcao5(form5.box51.value)"><i class="fa fa-book"></i> Contar</button>
+                        <div class="form-group">
+                            <input id="res5" class="form-control">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../assets/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
+
+    <!-- Contact Form JavaScript -->
+    <script src="../assets/js/jqBootstrapValidation.js"></script>
+    <script src="../assets/js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../assets/js/freelancer.min.js"></script>
+
+    <script type="text/javascript">
+        function funcao(nome, curso, universidade)
+        {
+            var msg = 'NOME seja bem-vindo ao curso de CURSO da UNIVERSIDADE';
+
+            msg = msg.replace('NOME', nome);
+            msg = msg.replace('CURSO', curso);
+            msg = msg.replace('UNIVERSIDADE', universidade);
+
+            return msg;
+        }
+
+        function funcao2(frase)
+        {
+            for(var i = 0; i < frase.length; i++)
+            {
+                frase = frase.replace(/a/i, 4);
+                frase = frase.replace(/e/i, 3);
+                frase = frase.replace(/i/i, 1);
+                frase = frase.replace(/o/i, 0);
+                frase = frase.replace(/s/i, 5);
+            }    
+            
+            return frase;
+        }
+
+        function reverso(frase2)
+        {
+            for(var i = 0; i < frase2.length; i++)
+            {
+                frase2 = frase2.replace('4', 'a');
+                frase2 = frase2.replace('3', 'e');
+                frase2 = frase2.replace('1', 'i');
+                frase2 = frase2.replace('0', 'o');
+                frase2 = frase2.replace('5', 's');
+            }    
+            
+            return frase2;
+        }
+
+        /**function funcao3(nomes)
+        {
+            var nomesA = [];
+
+            for(var i = 0; i < nomes.length; i++)
+                if(nomes[i].length == nomes.indexOf('a'))
+                    nomesA += nomes[i].length;
+
+            return nomesA;            
+        }**/
+
+        /**function funcao4(frase)
+        {
+            var contar = {};
+            var a, e, i, o, u;
+
+            for(var i = 0; i < frase.length; i++)
+            {
+                if(frase[i].length == 'a')
+                {
+                    a++;
+                    contar.push('a: '+ a);
+                }
+                else if(frase[i].length == 'e')
+                {
+                    e++;
+                    contar.push('e: '+ e);
+                }
+                else if(frase[i].length == 'i')
+                {
+                    i++;
+                    contar.push('i: '+ i);
+                }
+                else if(frase[i].length == 'o')
+                {
+                    o++;
+                    contar.push('o: '+ o);
+                }
+                else if(frase[i].length == 'u')
+                {
+                    u++;
+                    contar.push('u: '+ u);
+                }    
+
+            }
+
+            return contar;    
+        }**/
+
+        /**function funcao5(frase)
+        {
+            var contar;
+
+            if(frase = frase.split(' '))
+                contar++;
+
+            return contar;    
+        }**/
+
+
+
+        var frase = 'A linguagem C é fantástica';
+
+        var maiscula = frase.toUpperCase();
+        console.log('Upper: ' + maiscula);
+
+        var minuscula = frase.toLowerCase();
+        console.log('Lower: ' + minuscula);
+
+        var posicao = frase.indexOf('a');
+        console.log('Posição de a: '+ posicao);
+
+        var posicao2 = frase.lastIndexOf('a');
+        console.log('Posição de a: '+ posicao2);
+
+        var posicao3 = frase.indexOf('a', 10);
+        console.log('Posição de a: '+ posicao3);
+
+        var posicao4 = frase.lastIndexOf('a', 10);
+        console.log('Posição de a: '+ posicao4);
+
+        var posicao5 = frase.indexOf('Ã');
+        console.log('Posição de Ã: '+ posicao5);
+
+        var posicao6 = frase.search('a');
+        console.log('Posição de a: '+ posicao6);
+
+        var posicao7 = frase.search(/a/i)
+        console.log('Posição de a: '+ posicao7);
+
+        var posicao8 = frase.search(/a linguagem/i)
+        console.log('Posição de a linguagem: '+ posicao8);
+
+        var tamanho = frase.length;
+        console.log('Tamanho: '+ tamanho);
+
+        for(var i = 0; i < frase.length; i++)
+            console.log(frase[i]);
+
+        var palavra = frase.slice(2, 11);
+        console.log('Palavra: '+ palavra);
+
+        var palavra2 = frase.substr(2, 9);
+        console.log('Palavra: '+ palavra2);
+
+        frase = frase.replace('C', 'JavaScript');
+        console.log('Nova frase: '+ frase);
+
+        var vetor = frase.split(' ');
+        console.log(vetor);
+    </script>
+
+</body>
+
+</html>
