@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function questao1(n)
+	{
+		if(n > 0)
+			return 1;
+		else if(n < 0)
+			return -1;
+		else
+			return 0;
+	}
+
+	var x = questao1(0);
+	console.log('Resposta questao 1: '+ x);
+
+	function questao2(n)
+	{
+		if(n%2 == 0)
+			return 'P';
+		else
+			return 'I';
+	}
+
+	console.log('Resposta questao 2: '+ questao2(200));
+
+	function questao3(v)
+	{
+		var s = 0;
+		var c = 0;
+
+		for(var i = 0; i < v.length; i++)
+		{
+			if (v[i] > 0)
+			{
+				s += v[i];
+				c++;
+			}	
+		}
+
+		if(c > 0)
+			return s / c;
+		else
+			return 0;	
+	}
+
+	var n = [10, 9, 7, 5.5, 8, -10, -9, 8, 7, 9.5];
+	var m = questao3(n);
+	console.log('Resposta da questao 3: Media é '+ m);
+	for (var i = 0; i < n.length; i++)
+		if(n[i] == m)
+			console.log(n[i] + ' na posicao '+ i);
+
+	function questao4(v)
+	{
+		v.sort();
+		v.reverse();
+		var nv = v.slice(0, 3);
+
+
+		//for(var i = 0; i < 3; i++)
+			//nv[i] = v[i];
+			//nv.push(v[i]);
+	}
+
+	var n = [1, 6, 7, 5, 8, -10, -9, 8, 7, 9];
+	console.log('Resposta da questao 4: '+ n);
+
+	function questao5(v, n)
+	{	
+		var x = -1;
+
+		for(var i = 0; i < v.length; i++)
+			if(n == v[i].nome)
+		 		x = v[i].idade;
+
+		return x;
+	}
+
+	var pessoa = [{nome: 'Jose', idade: 18}, {nome: 'Maria', idade: 19}, {nome: 'Julia', idade: 20}];
+	var idade = questao5(pessoa, 'Jose');
+	console.log('Resposta da questao 5: '+ idade);
+
+</script>
+
+</body>
+</html>

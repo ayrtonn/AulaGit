@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Netflix</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../assets/css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index" style="background-color: black">
+<div class="container" style="margin-top: 10px">    
+    <div class="row">        
+        <div class="col-lg-3 col-md-3">      
+            <ul>  
+                <h2 style="color: white" style="font-size: 35px" style="font-family: Verdana">Categorias</h2>
+
+                <div class="btn-group-vertical" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default" onclick="carregarfilmes()">Todos</button>
+                    <button type="button" class="btn btn-default" onclick="carregarlancamentos()">Lançamento</button>
+                    <button type="button" class="btn btn-default">Ação</button>
+                    <button type="button" class="btn btn-default">Aventura</button>
+                    <button type="button" class="btn btn-default"">Comédia</button>
+                    <button type="button" class="btn btn-default">Drama</button>
+                    <button type="button" class="btn btn-default">Romance</button>
+                    <button type="button" class="btn btn-default">Suspense</button>                        
+                    <button type="button" class="btn btn-default">Terror</button> <br>
+
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Procurar..." id="titulo">
+                    <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button" onclick="carregarnome()"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>   
+                </div>
+            </ul>    
+        </div> 
+        
+        <div class="col-lg-9 col-md-9">
+            <div class="row" id="filmes">
+        
+            </div>  
+        </div>
+
+    </div>
+</div>    
+
+       
+
+    <!-- jQuery -->
+    <script src="../assets/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../assets/js/jqBootstrapValidation.js"></script>
+    <script src="../assets/js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../assets/js/freelancer.min.js"></script>
+    <script src="../assets/popper/popper.min.js"></script>
+
+    <script type="text/javascript"> 
+
+    var filmes = [{título: "Logan", capa: "Logan.jpg", categoria: "Ação", lançamento: 2017, duração: "2h17min", direção: "James Mangold", elenco: "Hugh Jackman, Patrick Stewart, Dafne Keen...", trailer: "https://www.youtube.com/watch?v=KPND6SgkN7Q"}, {título: "Deadpool", capa: "Dead_Pool.jpg", categoria: "Comédia", lançamento: 2016, duração: "1h48min", direção: "Time Miller", elenco: "Ryan Reynolds, Morena Baccarin, Ed Skrein...", trailer: "https://www.youtube.com/watch?v=rW-44KuoAdA"}];
+
+    carregarfilmes();
+
+    function carregarfilmes()
+    {
+        var a = "";
+        
+        for(var i = 0; i < filmes.length; i++)
+        {
+            a = a + '<div class="col-lg-3 col-md-3">' +
+                     '<div class="thumbnail">' + 
+                     '<img src="../img/filmes/' + filmes[i].capa + '">' + 
+                     '<h2>' + filmes[i].título + '</h2>' + 
+                     '<ul><li>' + filmes[i].categoria + '</li><li>' + filmes[i].lançamento + '</li><li>' + filmes[i].duração + '</li><li>' + filmes[i].direção + '</li><li>' + filmes[i].elenco + '</li></ul>' + 
+                     '<p><a href="' + filmes[i].trailer + '" target="_blank" class="btn btn-default" role="button">Trailer</a></p>' +
+                     '</div></div>';
+        }
+
+        document.getElementById("filmes").innerHTML = a;    
+    }
+
+    function carregarlancamentos()
+    {
+        var a = "";
+        
+        for(var i = 0; i < filmes.length; i++)
+        {
+            if(filmes[i].lançamento == 2017)
+            {    
+            a = a + '<div class="col-lg-3 col-md-3">' +
+                     '<div class="thumbnail">' + 
+                     '<img src="../img/filmes/' + filmes[i].capa + '">' + 
+                     '<h2>' + filmes[i].título + '</h2>' + 
+                     '<ul><li>' + filmes[i].categoria + '</li><li>' + filmes[i].lançamento + '</li><li>' + filmes[i].duração + '</li><li>' + filmes[i].direção + '</li><li>' + filmes[i].elenco + '</li></ul>' + 
+                     '<p><a href="' + filmes[i].trailer + '" target="_blank" class="btn btn-default" role="button">Trailer</a></p>' +
+                     '</div></div>';
+            }         
+        }
+
+        document.getElementById("filmes").innerHTML = a;    
+    }
+
+    function carregarnome()
+    {
+        var t = document.getElementById('titulo').value;
+
+        var f = '';
+        for(var i = 0; i < filmes.length; i++)
+        {
+            if(filmes[i].título.search(t) > -1)
+                f += '<div class="col-lg-3 col-md-3">' +
+                     '<div class="thumbnail">' + 
+                     '<img src="../img/filmes/' + filmes[i].capa + '">' + 
+                     '<h2>' + filmes[i].título + '</h2>' + 
+                     '<ul><li>' + filmes[i].categoria + '</li><li>' + filmes[i].lançamento + '</li><li>' + filmes[i].duração + '</li><li>' + filmes[i].direção + '</li><li>' + filmes[i].elenco + '</li></ul>' + 
+                     '<p><a href="' + filmes[i].trailer + '" target="_blank" class="btn btn-default" role="button">Trailer</a></p>' +
+                     '</div></div>';
+        }
+
+        document.getElementById('filmes').innerHTML = f;       
+    } 
+
+    //function carregaranimais()
+    //{
+   //     var animais = [{nome: "Cachorro", foto: "cachorro.jpg", classe: "Mamífero", patas: 4}, {nome: "Coelho", foto: "coelho.jpg", classe: "Mamífero", patas: 4}, {nome: "Elefante", foto: "elefante.jpg", classe: "Mamífero", patas: 4}, {nome: "Tatu", foto: "tatu_bola.jpg", classe: "Mamífero", patas: 4}, {nome: "Urso Polar", foto: "urso_polar.jpg", classe: "Mamífero", patas: 4}]
+
+    //    var a = "";
+    //    for(var i = 0; i < animais.length; i++)
+     //   {
+       //     a = a + '<div class="col-lg-4 col-md-4 text-center">' + '<img src="../img/animais/' + animais[i].foto + '">' + '<h1>' + animais[i].nome + '</h1>' + '<h2>' + animais[i].classe + '</h2>' + '<h3>' + animais[i].patas + '</h3>' + '</div>';
+    //    }
+
+     //   document.getElementById("animais").innerHTML = a;    
+    //}
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var a = questao1([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+	function questao1(vetor)
+	{
+		var vetorpar = [];
+
+		for(var i = 0; i < vetor.length; i++)
+		{
+			if(vetor[i]%2 == 0)
+				vetorpar.push(vetor[i]);
+		}
+
+		return vetorpar;	
+	}
+
+	console.log('Questao 1: '+ a);
+
+	//------------------------------------
+
+	var b = questao2([{nome: 'Ayrton', idade: 21, sexo: 'M'}, {nome: 'Anderson', idade: 18, sexo: 'M'}, {nome: 'Dâmella', idade: 18, sexo: 'F'}, {nome: "Jaqueline", idade: 20, sexo: 'F'}], 'F')
+
+	function questao2(vetor, sexo)
+	{
+		var a = [];
+
+		for(var i = 0; i < vetor.length; i++)
+			if(vetor[i].sexo == sexo)
+				a.push(vetor[i]);
+
+		return a;	
+	}
+
+	console.log('Questao 2: ');
+	console.log(b);
+
+	//-------------------------------------
+
+	var c = questao3(5);
+
+	function questao3(n)
+	{
+		var a = [];
+
+		for(i = n; i >= 0; i--)
+		{
+			if(i != n)
+				a.push(i);
+		}
+
+		return a;	
+	}
+
+	console.log('Questao 3: '+ c);
+
+	//-----------------------------------
+
+	var d = questao4(new Date("2017, 09, 22"))
+
+	function questao4(data)
+	{
+		var days = ['Domingo','Segunda','Terça','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado'];
+
+		return days[data.getDay()];
+	}
+
+	console.log('Questao 4: '+ d);
+
+	//-----------------------------------------
+
+	var e = questao5(new Date("2017, 09, 24"))
+
+	function questao5(data)
+	{
+		var days = data.getDay();
+
+		if (days >= 1 && days <= 5)
+			return 'Dia útil';
+		else if(days == 0 || days == 6)
+			return 'Fim de semana';
+	}
+
+	console.log('Questao 5: '+ e);
+
+</script>
+</body>
+</html>

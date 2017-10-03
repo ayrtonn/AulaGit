@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var x = converter(2, 'real');
+	console.log(x); 
+
+	function converter(x, dolarOuReal)
+	{
+		if(dolarOuReal == "dolar")
+			var conversao = x * 3.20;
+		else
+			var conversao = x / 3.20;	 
+
+		return conversao;
+	}
+
+	var y = sucessor(2)
+	var z = antecessor(2);
+
+	function sucessor(y)
+	{
+		var suc = y + 1;
+
+		console.log(suc);
+	}
+
+	function antecessor(y)
+	{
+		var ant = y - 1;
+
+		console.log(ant);
+	}
+
+	var valorC = calcGorjeta(10, 0.20);
+	
+	function calcGorjeta(x, y)
+	{
+		var gorjeta = 10 * 0.20;
+
+		return gorjeta;
+	}
+
+	var w = 10 + calcGorjeta();
+	console.log(w);
+
+	var p = nota(["a", "a", "c", "d", "e", "b", "c", "d", "b", "e"], ["a", "a", "c", "e", "d", "b", "c", "d", "b", "e"]);
+
+	function nota(prova, gabarito)
+	{
+		var notaf = 0;
+
+		for(var i = 0; i < gabarito.length; i++)
+		{
+			if(prova[i] == gabarito[i])
+				notaf ++;
+		}
+
+		console.log(notaf);	
+	}
+
+
+	var v = conceito(7);
+
+	function conceito(mf)
+	{
+		if(mf <= 4.9)
+			var c = "Conceito D";
+		else if(mf >= 5 && mf <= 6.9)
+			var c = "Conceito C";
+		else if(mf >= 7 && mf <= 8.9)
+			var c = "Conceito B";
+		else
+			var c = "Conceito A";
+
+		console.log(c);
+	}
+
+
+	var n = letrainformada(["ayrton", "anderson", "joão", "nicolas", "dâmella", "weslley", "jaqueline", "eduardo", "gabriela"], "i")
+
+	function letrainformada(nomes, letra)
+	{
+		var d = ''
+
+		for(var i = 0; i < nomes.length; i++)
+		{
+			if(nomes[i].search(letra) > -1)
+			{
+				var d = d + nomes[i] + ", ";
+			}	
+		}
+
+		console.log(d);	
+	}
+
+	function maisvelha()
+	{
+		var ni = [{nome: "ayrton", idade: 21}, {nome: "anderson", idade: 18}, {nome: "jaqueline", idade: 20}, {nome: "nicolas", idade: 19}]
+
+		var idade = 0;
+		var nome = '';
+
+		for(var i = 0; i < ni.length; i++)
+		{
+			if(ni[i].idade > idade)
+			{
+				idade = ni[i].idade;
+				nome = ni[i].nome;
+		}	}
+
+		console.log(nome);	
+	}
+
+	maisvelha();
+</script>
+
+</body>
+</html>
